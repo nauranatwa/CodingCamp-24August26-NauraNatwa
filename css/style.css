@@ -1,0 +1,711 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at top left, #302b63 0%, transparent 35%),
+        radial-gradient(circle at bottom right, #24243e 0%, transparent 40%),
+        #151522;
+    color: #f5f5f7;
+    padding: 50px;
+}
+
+header {
+    max-width: 1200px;
+    margin: 0 auto 35px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#greeting {
+    color: #aaa9c5;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+#user-name {
+    font-size: 42px;
+    letter-spacing: -1.5px;
+}
+
+header section:last-child {
+    text-align: right;
+    background: rgba(255, 255, 255, 0.07);
+    padding: 15px 22px;
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+#current-time {
+    display: block;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+#current-date {
+    color: #aaa9c5;
+    margin-top: 4px;
+}
+
+main {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1.2fr;
+    gap: 22px;
+}
+
+main section {
+    background: rgba(255, 255, 255, 0.07);
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    backdrop-filter: blur(12px);
+
+    padding: 28px;
+
+    border-radius: 24px;
+
+    min-height: 300px;
+
+    transition: 0.3s ease;
+}
+
+main section:hover {
+    transform: translateY(-5px);
+
+    background: rgba(255, 255, 255, 0.1);
+}
+
+h2 {
+    font-size: 22px;
+    margin-bottom: 25px;
+}
+
+input {
+    width: 100%;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    color: white;
+
+    padding: 14px;
+
+    border-radius: 12px;
+
+    outline: none;
+
+    font-size: 14px;
+
+    transition: 0.2s;
+}
+
+input:focus {
+    border-color: #8b5cf6;
+
+    background: rgba(255, 255, 255, 0.12);
+}
+
+input::placeholder {
+    color: #8f8fa3;
+}
+
+button {
+    border: none;
+
+    border-radius: 12px;
+
+    padding: 12px 18px;
+
+    font-family: inherit;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    background: rgba(255, 255, 255, 0.1);
+
+    color: white;
+
+    transition: 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+
+    background: rgba(255, 255, 255, 0.18);
+}
+
+#task-form {
+    display: flex;
+    gap: 10px;
+}
+
+#task-form button {
+    white-space: nowrap;
+
+    background: linear-gradient(135deg, #8b5cf6, #6366f1);
+}
+
+#task-list {
+    list-style: none;
+
+    margin-top: 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+#task-list li {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 8px;
+
+    padding: 12px;
+
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.06);
+}
+
+#task-list span {
+    flex: 1;
+
+    cursor: pointer;
+}
+
+#timer-section {
+    text-align: center;
+}
+
+#timer {
+    display: block;
+
+    font-size: 64px;
+
+    font-weight: 700;
+
+    letter-spacing: -3px;
+
+    margin: 45px 0 10px;
+
+    color: #c4b5fd;
+}
+
+#timer-section p {
+    color: #aaa9c5;
+
+    margin-bottom: 28px;
+}
+
+#timer-section button {
+    margin: 3px;
+}
+
+#start-btn {
+    background: linear-gradient(135deg, #8b5cf6, #6366f1);
+}
+
+#link-form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+#link-form button {
+    background: linear-gradient(135deg, #ec4899, #8b5cf6);
+
+    width: 100%;
+}
+
+#quick-links {
+    margin-top: 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+#quick-links span {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+#quick-links a {
+    flex: 1;
+
+    text-decoration: none;
+
+    color: #ddd6fe;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    padding: 13px 15px;
+
+    border-radius: 12px;
+
+    transition: 0.2s;
+}
+
+#quick-links a:hover {
+    background: rgba(139, 92, 246, 0.2);
+}
+
+@media (max-width: 900px) {
+
+    body {
+        padding: 25px;
+    }
+
+    header {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+    }
+
+    header section:last-child {
+        text-align: left;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    main section {
+        min-height: auto;
+    }
+}
+
+@media (max-width: 500px) {
+
+    #user-name {
+        font-size: 32px;
+    }
+
+    #task-form {
+        flex-direction: column;
+    }
+
+    #timer {
+        font-size: 55px;
+    }
+}
+
+#theme-toggle {
+    margin-top: 12px;
+    width: 100%;
+    font-size: 13px;
+    padding: 8px 14px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+#theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+body.light {
+    background:
+        radial-gradient(circle at top left, #ddd6fe 0%, transparent 35%),
+        radial-gradient(circle at bottom right, #e0e7ff 0%, transparent 40%),
+        #f3f4f6;
+    color: #1a1a2e;
+}
+
+body.light header section:last-child {
+    background: rgba(0, 0, 0, 0.05);
+    border-color: rgba(0, 0, 0, 0.08);
+}
+
+body.light #greeting,
+body.light #current-date,
+body.light #timer-section p {
+    color: #6b7280;
+}
+
+body.light #timer {
+    color: #7c3aed;
+}
+
+body.light main section {
+    background: rgba(255, 255, 255, 0.7);
+    border-color: rgba(0, 0, 0, 0.08);
+}
+
+body.light main section:hover {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+body.light input {
+    background: rgba(0, 0, 0, 0.05);
+    border-color: rgba(0, 0, 0, 0.12);
+    color: #1a1a2e;
+}
+
+body.light input:focus {
+    background: rgba(0, 0, 0, 0.08);
+}
+
+body.light input::placeholder {
+    color: #9ca3af;
+}
+
+body.light button {
+    background: rgba(0, 0, 0, 0.07);
+    color: #1a1a2e;
+}
+
+body.light button:hover {
+    background: rgba(0, 0, 0, 0.13);
+}
+
+body.light #task-form button,
+body.light #start-btn {
+    background: linear-gradient(135deg, #8b5cf6, #6366f1);
+    color: white;
+}
+
+body.light #link-form button {
+    background: linear-gradient(135deg, #ec4899, #8b5cf6);
+    color: white;
+}
+
+body.light #task-list li {
+    background: rgba(0, 0, 0, 0.04);
+}
+
+body.light #quick-links a {
+    background: rgba(0, 0, 0, 0.04);
+    color: #5b21b6;
+}
+
+body.light #quick-links a:hover {
+    background: rgba(139, 92, 246, 0.15);
+}
+
+body.light #theme-toggle {
+    background: rgba(0, 0, 0, 0.07);
+    color: #1a1a2e;
+}
+
+body.light #theme-toggle:hover {
+    background: rgba(0, 0, 0, 0.13);
+}
+
+#name-display {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+#change-name-btn {
+    font-size: 13px;
+    padding: 7px 14px;
+}
+
+#name-form {
+    margin-top: 10px;
+}
+
+#name-form label {
+    display: block;
+    font-size: 13px;
+    color: #aaa9c5;
+    margin-bottom: 6px;
+}
+
+#name-form-controls {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+#name-form-controls input {
+    flex: 1;
+    min-width: 160px;
+}
+
+#name-form-controls button {
+    white-space: nowrap;
+}
+
+body.light #name-form label {
+    color: #6b7280;
+}
+
+#task-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+#task-toolbar label {
+    font-size: 13px;
+    color: #aaa9c5;
+    white-space: nowrap;
+}
+
+#sort-select {
+    width: auto;
+    padding: 8px 12px;
+    font-size: 13px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: white;
+    border-radius: 10px;
+    outline: none;
+}
+
+#sort-select:focus {
+    border-color: #8b5cf6;
+}
+
+body.light #task-toolbar label {
+    color: #6b7280;
+}
+
+body.light #sort-select {
+    background: rgba(0, 0, 0, 0.05);
+    border-color: rgba(0, 0, 0, 0.12);
+    color: #1a1a2e;
+}
+
+#timer-controls {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+#timer-section button {
+    margin: 0;
+}
+
+#pomodoro-duration {
+    margin-top: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#pomodoro-duration label {
+    font-size: 13px;
+    color: #aaa9c5;
+    white-space: nowrap;
+}
+
+#pomodoro-input {
+    width: 70px;
+    padding: 8px 10px;
+    text-align: center;
+    font-size: 14px;
+}
+
+#pomodoro-input:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+body.light #pomodoro-duration label {
+    color: #6b7280;
+}
+
+#task-form {
+    flex-direction: column;
+    gap: 10px;
+}
+
+#task-form-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+#task-form button[type="submit"] {
+    white-space: nowrap;
+    align-self: flex-end;
+    background: linear-gradient(135deg, #8b5cf6, #6366f1);
+    color: white;
+}
+
+textarea#task-notes {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: white;
+    padding: 10px 14px;
+    border-radius: 12px;
+    outline: none;
+    font-size: 13px;
+    font-family: inherit;
+    resize: vertical;
+    min-height: 52px;
+    transition: 0.2s;
+    line-height: 1.5;
+}
+
+textarea#task-notes:focus {
+    border-color: #8b5cf6;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+textarea#task-notes::placeholder {
+    color: #8f8fa3;
+}
+
+#task-list li {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+}
+
+.task-body {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+}
+
+.task-text {
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.task-note {
+    font-size: 12px;
+    color: #aaa9c5;
+    line-height: 1.4;
+}
+
+.task-actions {
+    display: flex;
+    gap: 6px;
+    justify-content: flex-end;
+}
+
+.task-actions button {
+    font-size: 12px;
+    padding: 6px 12px;
+}
+
+body.light textarea#task-notes {
+    background: rgba(0, 0, 0, 0.05);
+    border-color: rgba(0, 0, 0, 0.12);
+    color: #1a1a2e;
+}
+
+body.light textarea#task-notes:focus {
+    background: rgba(0, 0, 0, 0.08);
+}
+
+body.light textarea#task-notes::placeholder {
+    color: #9ca3af;
+}
+
+body.light .task-note {
+    color: #6b7280;
+}
+
+.task-edit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    padding-top: 4px;
+}
+
+.task-edit-form input,
+.task-edit-form textarea {
+    font-size: 13px;
+    padding: 9px 12px;
+}
+
+.task-edit-form textarea {
+    resize: vertical;
+    min-height: 52px;
+    font-family: inherit;
+    line-height: 1.5;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: white;
+    border-radius: 12px;
+    outline: none;
+    transition: 0.2s;
+}
+
+.task-edit-form textarea:focus {
+    border-color: #8b5cf6;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.task-edit-form textarea::placeholder {
+    color: #8f8fa3;
+}
+
+.task-edit-actions {
+    display: flex;
+    gap: 6px;
+    justify-content: flex-end;
+}
+
+.task-edit-actions button {
+    font-size: 12px;
+    padding: 6px 14px;
+}
+
+.task-edit-actions button[type="submit"] {
+    background: linear-gradient(135deg, #8b5cf6, #6366f1);
+    color: white;
+}
+
+body.light .task-edit-form textarea {
+    background: rgba(0, 0, 0, 0.05);
+    border-color: rgba(0, 0, 0, 0.12);
+    color: #1a1a2e;
+}
+
+body.light .task-edit-form textarea:focus {
+    background: rgba(0, 0, 0, 0.08);
+}
+
+body.light .task-edit-form textarea::placeholder {
+    color: #9ca3af;
+}
+
+body.light .task-edit-actions button[type="submit"] {
+    color: white;
+}
