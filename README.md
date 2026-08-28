@@ -1,4 +1,4 @@
-# Life Dashboard
+# LIFE DASHBOARD
 
 A simple personal productivity dashboard built with HTML, CSS, and JavaScript.
 
@@ -36,4 +36,4 @@ The application uses Local Storage to save user preferences, tasks, timer durati
 - Custom Name
 - Change Pomodoro Time
 - Prevent Duplicate Tasks
-- Sort Tasks #CodingCamp-24August26-NauraNatwa
+- Sort Tasks
