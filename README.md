@@ -24,7 +24,7 @@ A simple personal productivity dashboard built with HTML, CSS, and JavaScript.
 - JavaScript
 - Kiro
 
-## How to Use
+## How to Use?
 
 Open `index.html` in a web browser.
 
